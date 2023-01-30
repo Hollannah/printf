@@ -41,6 +41,9 @@ if ((flags & F_ZERO) && !(flags & F_MINUS))
 	padd = '0';
 if (flags & F_PLUS)
 	extra_c = '+', length++;
+	else if (flags & F_SPACE)
+		extra_c = ' ', length++;
+
 	ind++;
 
 	/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
